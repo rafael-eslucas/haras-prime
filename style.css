@@ -1,0 +1,142 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    font-size: 16px;
+}
+
+div {
+    padding: 2px;
+    margin: 3px;
+}
+
+a {
+    margin-right: 2vw;
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #555555;
+}
+
+.container {
+    display: flex;
+}
+
+#navegacao {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-width: 1px;
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#links {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logo {
+    width: 5vw;
+    min-width: 50px;
+}
+
+#hero {
+    justify-content: space-between;
+    background-color: beige;
+}
+
+#hero div {
+    padding: 10px;
+}
+
+#hero img {
+    width: 30vw;
+}
+
+#herobackground {
+    padding: 2vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin: 0px;
+    margin-top: 1vw;
+
+    background-image: url(herobackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#sobre {
+    height: 500px;
+}
+
+#contato {
+    margin-top: 10px;
+    background-color: beige;
+}
+
+#contato p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 780px) {
+    #hero {
+        flex-direction: column;
+    }
+    #hero img {
+        width: 100%;
+    }
+
+    * {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+#galeria {
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+#galeria div {
+    padding: 0px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    width: 90vw;
+}
+
+#galeria div p {
+    margin: 0px;
+}
+
+#galeria div img {
+    width: 35vw;
+}
+
+#title {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
