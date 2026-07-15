@@ -128,9 +128,9 @@ a:hover {
     margin-bottom: 2.5vw;
 }
 
-#servicos div {
+/*#servicos div {
     margin: 0px;
-}
+}*/
 
 #servicos div h2,
 #servicos div p {
@@ -146,7 +146,7 @@ a:hover {
 
 .servicosmini {
     justify-content: space-between;
-    margin-bottom: 100vw;
+    margin-bottom: 2.5vw;
 }
 
 .servicosmini div {
