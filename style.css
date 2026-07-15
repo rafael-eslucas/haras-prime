@@ -1,20 +1,52 @@
+@font-face {
+    /* Define um nome interno para a fonte personalizada */
+    font-family: Arimo;
+    /* Indica o caminho do arquivo da fonte*/
+    src: url(Arimo/Arimo-VariableFont_wght.ttf);
+}
+@font-face {
+    /* Define um nome interno para a fonte personalizada */
+    font-family: Baskerville;
+    /* Indica o caminho do arquivo da fonte*/
+    src: url(Libre_Baskerville/LibreBaskerville-VariableFont_wght.ttf);
+}
+
+
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: #EDEDED;
     padding: 0px;
     margin: 0px;
 }
 
 * {
-    font-size: 16px;
+    font-size: 14px;
+    font-family: Arimo;
 }
 
 div {
     padding: 2px;
     margin: 3px;
+}
+
+h1, h2 {
+    font-family: Baskerville;
+}
+h1 {
+    font-size: 20px;
+}
+p {
+    line-height: 1.5;
+}
+#titlehero {
+    justify-content: center;
+}
+h2 {
+    font-size: 14px;
 }
 
 a {
@@ -39,7 +71,7 @@ a:hover {
     justify-content: space-between;
     border-bottom-style: solid;
     border-width: 1px;
-    background-color: #FFFFFF;
+    background-color: #EDEDED;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -57,7 +89,7 @@ a:hover {
 
 #hero {
     justify-content: space-between;
-    background-color: beige;
+    background-color: #EDEDED;
 }
 
 #hero div {
@@ -65,7 +97,7 @@ a:hover {
 }
 
 #hero img {
-    width: 30vw;
+    width: 38vw;
 }
 
 #herobackground {
@@ -73,27 +105,84 @@ a:hover {
     padding-left: 10vw;
     padding-right: 10vw;
     margin: 0px;
-    margin-top: 1vw;
-
-    background-image: url(herobackground.jpg);
+    background-image: url(images/herobackground.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 }
 
-#sobre {
-    height: 500px;
+#servicos {
+    margin-top: 2.5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#servicos div div {
+    width: 35vw;
+}
+
+#servicos h1 {
+    text-align: center;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+}
+
+#servicos div {
+    margin: 0px;
+}
+
+#servicos div h2,
+#servicos div p {
+    text-align: center;
+}
+
+#servicos div div img {
+    width: 35vw;
+    border-radius: 15px;
+    border-bottom: 1px;
+    border-color: #A69897;
+}
+
+.servicosmini {
+    justify-content: space-between;
+    margin-bottom: 100vw;
+}
+
+.servicosmini div {
+    padding: 0px;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #A69897;
 }
 
 #contato {
     margin-top: 10px;
-    background-color: beige;
+    margin: 0px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #401713;
 }
 
 #contato p {
+    color: #EDEDED;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#contato div p {
+    margin-top: 0px;
+}
+
+.ico {
+    height: 16px;
+}
+
+#direitos {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 
@@ -104,7 +193,15 @@ a:hover {
     #hero img {
         width: 100%;
     }
-
+    .servicosmini {
+        flex-direction: column;
+    }
+    #servicos div div {
+        width: 80vw;
+    }
+    #servicos div div img {
+        width: 80vw;
+    }
     * {
         font-size: 12px;
     }
@@ -112,18 +209,24 @@ a:hover {
 
 
 
-
+#unicornio  {
+    align-items: center;
+    flex-direction: column;
+}
+#unicornio img {
+    width: 60vw;
+}
 
 
 #galeria {
     justify-content: flex-start;
     padding: 0px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 #galeria div {
     padding: 0px;
-    margin-left: 5vw;
-    margin-right: 5vw;
     margin-bottom: 2vw;
     width: 90vw;
 }
@@ -132,11 +235,13 @@ a:hover {
     margin: 0px;
 }
 
-#galeria div img {
+#galeria div:not(#unicornio) img {
     width: 35vw;
+    margin-right: 0px;
 }
 
-#title {
+#titlegallery {
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-bottom: 2.5vw;
 }
