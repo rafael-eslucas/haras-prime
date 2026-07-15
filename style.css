@@ -13,6 +13,10 @@
 
 
 
+
+/* -------------------- INDEX.HTML -------------------- */
+
+/* Comportamento da página inteira */
 html {
     scroll-behavior: smooth;
 }
@@ -28,23 +32,20 @@ body {
     font-family: Arimo;
 }
 
-div {
-    padding: 2px;
-    margin: 3px;
-}
+/* Texto e links */
 
 h1, h2 {
     font-family: Baskerville;
 }
+
 h1 {
     font-size: 20px;
 }
+
 p {
     line-height: 1.5;
 }
-#titlehero {
-    justify-content: center;
-}
+
 h2 {
     font-size: 14px;
 }
@@ -59,9 +60,13 @@ a:hover {
     color: #555555;
 }
 
-.container {
+/* Configuração geral dos div flex*/
+.flex {
     display: flex;
 }
+
+
+/* Navegação */
 
 #navegacao {
     margin: 0px;
@@ -87,19 +92,22 @@ a:hover {
     min-width: 50px;
 }
 
+
+/*--- Hero ---*/
+
 #hero {
     justify-content: space-between;
     background-color: #EDEDED;
 }
-
+/* A partezinha bonitinha entre o texto e a imagem e o background */
 #hero div {
     padding: 10px;
 }
-
+/* Tamanho da imagem */
 #hero img {
     width: 38vw;
 }
-
+/* Background do hero */
 #herobackground {
     padding: 2vw;
     padding-left: 10vw;
@@ -112,43 +120,43 @@ a:hover {
 
 }
 
+
+/* --- Nossos Serviços --- */
+/* div principal */
 #servicos {
     margin-top: 2.5vw;
     margin-left: 10vw;
     margin-right: 10vw;
 }
-
-#servicos div div {
+/* Cada pequeno div do serviço */
+.servicosmini div {
     width: 35vw;
 }
-
+/* O título do serviço */
 #servicos h1 {
-    text-align: center;
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
 }
-
-/*#servicos div {
-    margin: 0px;
-}*/
-
-#servicos div h2,
-#servicos div p {
+/* Centralizar todo o texto */
+#servicos h1,
+#servicos h2,
+#servicos p {
     text-align: center;
 }
-
-#servicos div div img {
+/* Imagens dos serviços */
+#servicos img {
     width: 35vw;
     border-radius: 15px;
     border-bottom: 1px;
     border-color: #A69897;
 }
-
+/* Space para separar as colunas e
+   margem pra separar as linhas */
 .servicosmini {
     justify-content: space-between;
     margin-bottom: 2.5vw;
 }
-
+/* Adicionar borda no div de cada serviço */
 .servicosmini div {
     padding: 0px;
     border-style: solid;
@@ -157,27 +165,30 @@ a:hover {
     border-color: #A69897;
 }
 
+
+/* ----- Contato ----- */
+/* divzão */
 #contato {
-    margin-top: 10px;
-    margin: 0px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 10vw;
     background-color: #401713;
 }
-
+/* Textos */
 #contato p {
     color: #EDEDED;
     margin-left: 10px;
     margin-right: 10px;
 }
-
+/* Tirar a margem dos que não são "Contato:" */
 #contato div p {
     margin-top: 0px;
 }
-
+/* ícones de instagram, telefone, local */
 .ico {
     height: 16px;
 }
+
+/* ----- Todos os direitos reservados -----*/
 
 #direitos {
     text-align: center;
@@ -185,6 +196,52 @@ a:hover {
     margin-bottom: 2px;
 }
 
+
+
+/* -------------------- VACALO.HTML -------------------- */
+
+/* ----- div da galeria ----- */
+/* "Nossos cavalos" */
+#galeria {
+    justify-content: flex-start;
+    padding: 0px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+#titlegallery {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 2.5vw;
+}
+/* divs dentro de galeria */
+#galeria div {
+    padding: 0px;
+    margin-bottom: 2vw;
+    width: 90vw;
+}
+/* tirar margem do texto */
+#galeria p {
+    margin: 0px;
+}
+/* Tamanho e margem das imagens que não são unicornios */
+#galeria div:not(#unicornio) img {
+    width: 35vw;
+    margin-right: 0px;
+}
+/* deixar div do unicornio 
+   centralizado e em colunas */
+#unicornio  {
+    align-items: center;
+    flex-direction: column;
+}
+/* deixar a imagem do unicornio grandoona */
+#unicornio img {
+    width: 60vw;
+}
+
+
+
+/* E se a tela for pequena? */
 
 @media (max-width: 780px) {
     #hero {
@@ -199,49 +256,10 @@ a:hover {
     #servicos div div {
         width: 80vw;
     }
-    #servicos div div img {
+    #servicos img {
         width: 80vw;
     }
     * {
         font-size: 12px;
     }
-}
-
-
-
-#unicornio  {
-    align-items: center;
-    flex-direction: column;
-}
-#unicornio img {
-    width: 60vw;
-}
-
-
-#galeria {
-    justify-content: flex-start;
-    padding: 0px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
-
-#galeria div {
-    padding: 0px;
-    margin-bottom: 2vw;
-    width: 90vw;
-}
-
-#galeria div p {
-    margin: 0px;
-}
-
-#galeria div:not(#unicornio) img {
-    width: 35vw;
-    margin-right: 0px;
-}
-
-#titlegallery {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-bottom: 2.5vw;
 }
