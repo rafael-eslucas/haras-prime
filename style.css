@@ -90,6 +90,7 @@ a:hover {
 #logo {
     width: 5vw;
     min-width: 50px;
+    margin: 10px 0px;
 }
 
 
@@ -98,6 +99,7 @@ a:hover {
 #hero {
     justify-content: space-between;
     background-color: #EDEDED;
+    border-radius: 5px;
 }
 /* A partezinha bonitinha entre o texto e a imagem e o background */
 #hero div {
@@ -106,6 +108,11 @@ a:hover {
 /* Tamanho da imagem */
 #hero img {
     width: 38vw;
+    border-radius: 5px;
+}
+/* texto do hero */
+#herotext * {
+    align-items: center;
 }
 /* Background do hero */
 #herobackground {
@@ -129,22 +136,32 @@ a:hover {
     margin-right: 10vw;
 }
 /* Cada pequeno div do serviço */
-.servicosmini div {
+.servico {
     width: 35vw;
+    transition: opacity 0.3s ease-in-out;
 }
 /* O título do serviço */
-#servicos h1 {
+.servico h1 {
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
 }
+/* mouse passa pelo servico */
+.servico:hover {
+    opacity: 0.75;
+}
 /* Centralizar todo o texto */
-#servicos h1,
-#servicos h2,
-#servicos p {
+.servico h1,
+.servico h2,
+.servico p {
     text-align: center;
 }
+/* paragrafo sobre os serviços */
+.servico p {
+    margin: 0 2.5vw;
+    padding-bottom: 1vw;
+}
 /* Imagens dos serviços */
-#servicos img {
+.servico img {
     width: 35vw;
     border-radius: 15px;
     border-bottom: 1px;
@@ -152,12 +169,12 @@ a:hover {
 }
 /* Space para separar as colunas e
    margem pra separar as linhas */
-.servicosmini {
+.linhaservico {
     justify-content: space-between;
     margin-bottom: 2.5vw;
 }
 /* Adicionar borda no div de cada serviço */
-.servicosmini div {
+.linhaservico div {
     padding: 0px;
     border-style: solid;
     border-radius: 15px;
