@@ -2,13 +2,13 @@
     /* Define um nome interno para a fonte personalizada */
     font-family: Arimo;
     /* Indica o caminho do arquivo da fonte*/
-    src: url(Arimo/Arimo-VariableFont_wght.ttf);
+    src: url(fonts/Arimo/Arimo-VariableFont_wght.ttf);
 }
 @font-face {
     /* Define um nome interno para a fonte personalizada */
     font-family: Baskerville;
     /* Indica o caminho do arquivo da fonte*/
-    src: url(Libre_Baskerville/LibreBaskerville-VariableFont_wght.ttf);
+    src: url(fonts/Libre_Baskerville/LibreBaskerville-VariableFont_wght.ttf);
 }
 
 
@@ -64,6 +64,41 @@ a:hover {
 .flex {
     display: flex;
 }
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    width: 35vw;
+    padding: 0px;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #A69897;
+    margin-bottom: 2.5vw;
+}
+.card h1 {
+    margin: 2.5vw 0vw;
+}
+.card h1,
+.card h2,
+.card p {
+    text-align: center;
+}
+.card p {
+    margin: 0 2.5vw;
+    padding-bottom: 1vw;
+}
+.card img {
+    width: 35vw;
+    border-radius: 15px;
+    border-bottom: 1px;
+    border-color: #A69897;
+}
+.linha {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 /* Navegação */
@@ -99,7 +134,7 @@ a:hover {
 #hero {
     justify-content: space-between;
     background-color: #EDEDED;
-    border-radius: 5px;
+    border-radius: 0.5vw;
 }
 /* A partezinha bonitinha entre o texto e a imagem e o background */
 #hero div {
@@ -108,11 +143,7 @@ a:hover {
 /* Tamanho da imagem */
 #hero img {
     width: 38vw;
-    border-radius: 5px;
-}
-/* texto do hero */
-#herotext * {
-    align-items: center;
+    border-radius: 0.5vw;
 }
 /* Background do hero */
 #herobackground {
@@ -135,51 +166,11 @@ a:hover {
     margin-left: 10vw;
     margin-right: 10vw;
 }
-/* Cada pequeno div do serviço */
 .servico {
-    width: 35vw;
     transition: opacity 0.3s ease-in-out;
 }
-/* O título do serviço */
-.servico h1 {
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
-}
-/* mouse passa pelo servico */
 .servico:hover {
     opacity: 0.75;
-}
-/* Centralizar todo o texto */
-.servico h1,
-.servico h2,
-.servico p {
-    text-align: center;
-}
-/* paragrafo sobre os serviços */
-.servico p {
-    margin: 0 2.5vw;
-    padding-bottom: 1vw;
-}
-/* Imagens dos serviços */
-.servico img {
-    width: 35vw;
-    border-radius: 15px;
-    border-bottom: 1px;
-    border-color: #A69897;
-}
-/* Space para separar as colunas e
-   margem pra separar as linhas */
-.linhaservico {
-    justify-content: space-between;
-    margin-bottom: 2.5vw;
-}
-/* Adicionar borda no div de cada serviço */
-.linhaservico div {
-    padding: 0px;
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 1px;
-    border-color: #A69897;
 }
 
 
@@ -230,12 +221,6 @@ a:hover {
     margin-right: 10vw;
     margin-bottom: 2.5vw;
 }
-/* divs dentro de galeria */
-#galeria div {
-    padding: 0px;
-    margin-bottom: 2vw;
-    width: 90vw;
-}
 /* tirar margem do texto */
 #galeria p {
     margin: 0px;
@@ -254,6 +239,7 @@ a:hover {
 /* deixar a imagem do unicornio grandoona */
 #unicornio img {
     width: 60vw;
+    border-radius: 0.5vw;
 }
 
 
@@ -267,13 +253,11 @@ a:hover {
     #hero img {
         width: 100%;
     }
-    .servicosmini {
+    .linha {
         flex-direction: column;
     }
-    #servicos div div {
-        width: 80vw;
-    }
-    #servicos img {
+    .card,
+    .card img {
         width: 80vw;
     }
     * {
