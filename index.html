@@ -8,11 +8,11 @@
     <title>Haras Prime</title>
 </head>
     <body>
-        <header>
+        <header id="top">
             <!--- Navegação --->
             <nav class="flex" id="navegacao">
                 <div>
-                    <img id="logo" src="images/logo.jpeg" alt="">
+                    <a href="index.html"><img id="logo" src="images/logo.jpeg" alt=""></a>
                 </div>
                 <div class="flex" id="links">
                     <a href="#top">Início</a>
@@ -48,28 +48,37 @@
         <div id="servicos">
             <h1>Nossos Serviços</h1>
             <div class="flex linha">
-                <a href=""><div class="card servico">
+                <div class="card servico" onclick="abrirModal('hospedagem')">
                     <img src="images/hospedagem.jpeg" alt="">
                     <h2>Hospedagem de Cavalos</h2>
                     <p>Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.</p>
-                </div></a>
-                <a href=""><div class="card servico">
+                </div>
+                <div class="card servico" onclick="abrirModal('treinamento')">
                     <img src="images/treinamento.jpeg" alt="">
                     <h2>Treinamento</h2>
                     <p>Contamos com profissionais especializados que desenvolvem programas de treinamento personalizados, respeitando o ritmo e os objetivos de cada animal.</p>
-                </div></a>
+                </div>
             </div>
             <div class="flex linha">
-                <a href=""><div class="card servico">
+                <div class="card servico" onclick="abrirModal('veterinaria')">
                     <img src="images/veteriaria.jpeg" alt="">
                     <h2>Assistência Veterinária</h2>
                     <p>Nossa equipe oferece acompanhamento veterinário preventivo e atendimento de emergência, priorizando a saúde e a qualidade de vida dos cavalos.</p>
-                </div></a>
-                <a href=""><div class="card servico">
+                </div>
+                <div class="card servico" onclick="abrirModal('banho')">
                     <img src="images/banho.jpeg" alt="">
                     <h2>Manejo e Cuidados</h2>
                     <p>Realizamos alimentação balanceada, higiene, ferrageamento e monitoramento diário para manter os animais sempre saudáveis e bem cuidados.</p>
-                </div></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal">
+            <div id="janela">
+                <button onclick="fecharModal()" id="close">X</button>
+                <img id="imagemmodal">
+                <h2 id="titulomodal">Hospedagem de Cavalos</h2>
+                <p id="textomodal">Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.</p>
             </div>
         </div>
 
@@ -98,5 +107,11 @@
                 <h3 id="direitos">&copy; 2026 Haras Prime - Todos os direitos reservados</h3>
             </div>
         </footer>
+
+
+
+
+
+        <script src="script.js"></script>
     </body>
 </html>

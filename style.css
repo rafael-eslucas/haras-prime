@@ -138,24 +138,23 @@ a:hover {
 }
 /* A partezinha bonitinha entre o texto e a imagem e o background */
 #hero div {
-    padding: 10px;
+    padding: 1vw 1.5vw;
 }
 /* Tamanho da imagem */
 #hero img {
-    width: 38vw;
+    width: 27vw;
     border-radius: 0.5vw;
 }
 /* Background do hero */
 #herobackground {
     padding: 2vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
     margin: 0px;
     background-image: url(images/herobackground.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 
@@ -206,35 +205,64 @@ a:hover {
 
 
 
+#modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#janela {
+    background-color: #EDEDED;
+    padding: 1vw 2vw 1.5vw;
+    width: 30vw;
+    border-radius: 0.5vw;
+}
+#janela img {
+    width: 30vw;
+}
+#close {
+    margin-bottom: 1vw;
+    float: right;
+    border: none;
+    background-color: #EDEDED;
+}
+#modal.aberto {
+    display: flex;
+}
+
+
+
+
 /* -------------------- VACALO.HTML -------------------- */
 
 /* ----- div da galeria ----- */
 /* "Nossos cavalos" */
 #galeria {
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0px;
     margin-left: 10vw;
     margin-right: 10vw;
 }
 #titlegallery {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-bottom: 2.5vw;
+    margin: 2.5vw 10vw 3vw;
 }
 /* tirar margem do texto */
 #galeria p {
     margin: 0px;
 }
 /* Tamanho e margem das imagens que não são unicornios */
-#galeria div:not(#unicornio) img {
+#galeria img {
     width: 35vw;
     margin-right: 0px;
 }
 /* deixar div do unicornio 
    centralizado e em colunas */
-#unicornio  {
-    align-items: center;
+#unicornio {
     flex-direction: column;
+    width: 60vw;
 }
 /* deixar a imagem do unicornio grandoona */
 #unicornio img {
@@ -246,12 +274,15 @@ a:hover {
 
 /* E se a tela for pequena? */
 
-@media (max-width: 780px) {
+@media (max-width: 1100px) {
     #hero {
         flex-direction: column;
     }
     #hero img {
-        width: 100%;
+        width: 57vw;
+    }
+    #hero div {
+        padding: 3 4.5vw;
     }
     .linha {
         flex-direction: column;
@@ -262,5 +293,8 @@ a:hover {
     }
     * {
         font-size: 12px;
+    }
+    #janela, #janela img {
+        width: 60vw;
     }
 }
