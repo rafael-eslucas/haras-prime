@@ -123,6 +123,13 @@ a:hover {
     justify-content: flex-end;
     align-items: center;
 }
+#menu {
+    display: none;    
+}
+#menu button {
+    font-size: 24px;
+    border: none;
+}
 
 #logo {
     width: 5vw;
@@ -309,14 +316,14 @@ a:hover {
     margin: 0 10vw;
 }
 #titlegallery {
-    margin: 2.5vw 10vw 3vw;
+    margin: 5vw 0vw 5vw 10vw;
 }
 /* tirar margem do texto */
 #galeria p {
     margin: 0px;
 }
 /* Tamanho e margem das imagens que não são unicornios */
-#galeria img {
+.vacalo img {
     width: 35vw;
     margin-right: 0px;
 }
@@ -335,21 +342,21 @@ a:hover {
 
 
 
-/* E se a tela for pequena? */
+/* ---------- E se a tela for pequena? ---------- */
 
 @media (max-width: 1100px) {
-    #hero-box {
-        flex-direction: column;
-        padding: 2vw;
+    /* Básicos */
+    * {
+        font-size: 12px;
     }
-    #hero-box img {
-        width: 73vw;
+    h1 {
+        font-size: 20px
     }
-    #hero {
-        padding: 2vw 10vw;
+    h2 {
+        font-size: 18px
     }
-    #carrossel, #carrossel img {
-        width: 80vw;
+    p {
+        font-size: 14px;
     }
     .linha {
         flex-direction: column;
@@ -358,13 +365,108 @@ a:hover {
     .card img {
         width: 80vw;
     }
-    .vacalo {
+    /* Menu */
+    #menu {
+        display: flex;
+    }
+    #links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: #EDEDED;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+
+        padding: 20px 0;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+    }
+    #links.aberto {
+        display: flex;
+    }
+
+    /* ---------- Hero ---------- */
+    #hero-box {
+        flex-direction: column;
+        padding: 2vw;
+    }
+    #hero-box img {
+        width: 73vw;
+    }
+    #hero {
+        padding: 10vw;
+    }
+
+    /* ---------- Filosofia ---------- */
+    #filosofia-box {
+        gap: 10vw;
+        margin-top: 15vw;
+    }
+    #filosofia-box div {
         width: 80vw;
     }
-    * {
-        font-size: 12px;
+
+    /* ---------- Serviços ---------- */
+    #servicos h1 {
+        margin: 1em 0 1em 0;
+    }
+    .servico {
+        margin-bottom: 5vw;
+    }
+
+    /* ---------- Feedback ---------- */
+    .feedback-box div {
+        width: 70vw;
+    }
+    .feedback-box div {
+        padding: 5vw;
+    }
+    .feedback-box img {
+        width: 20vw;
+    }
+
+    /* ---------- Visita ---------- */
+    #visita {
+        margin: 10vw;
+        padding: 5vw;
+        width: 70vw;
+    }
+    #visita a {
+        padding: 3vw;
+    }
+
+
+
+    .vacalo img {
+        width: 80vw;
+    }
+    #unicornio {
+        margin: 0vw;
+    }
+    #unicornio,
+    #unicornio img {
+        width: 80vw;
+    }
+    #unicornio h2 {
+        font-size: 14px;
+    }
+
+
+
+    /* ---------- Contatos ---------- */
+    #contato-box {
+        flex-direction: column;
     }
     #janela, #janela img {
-        width: 60vw;
+        width: 80vw;
+        border-radius: 2vw;
+    }
+    #janela {
+        padding: 5vw;
     }
 }

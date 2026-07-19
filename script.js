@@ -4,7 +4,11 @@ const titulo = document.getElementById("titulomodal");
 const texto = document.getElementById("textomodal");
 const imagem = document.getElementById("imagemmodal");
 
-function abrirModal(servico) {
+
+const menu = document.getElementById("menu");
+const links = document.getElementById("links");
+
+function abrirServico(servico) {
     if (servico == "hospedagem") {
         titulo.textContent = "Hospedagem";
         texto.textContent = "Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.";
@@ -28,6 +32,11 @@ function abrirModal(servico) {
     modal.classList.add("aberto");
 }
 
-function fecharModal() {
+function fecharServico() {
     modal.classList.remove("aberto");
+}
+
+
+function abrirMenu() {
+    links.classList.toggle("aberto")
 }

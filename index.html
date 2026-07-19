@@ -15,6 +15,9 @@
                 <div>
                     <a href="index.html"><img id="logo" src="images/logo.jpeg" alt=""></a>
                 </div>
+                <div id="menu">
+                    <button onclick="abrirMenu()">☰</button>
+                </div>
                 <div class="flex" id="links">
                     <a href="#top">Início</a>
                     <a href="#servicos">Nossos Serviços</a>
@@ -43,7 +46,7 @@
         <!--- Filosofia? --->
         <div id="filosofia">
             <h1>Manejo em liberdade,<br>e responsabilidade pela vida. </h1>
-            <div class="flex" id="filosofia-box">
+            <div class="linha" id="filosofia-box">
                 <div>
                     <h2>1</h2>
                     <h3>Simplicidade & descontração</h3>
@@ -71,25 +74,25 @@
         <!--- Serviços --->
         <div id="servicos">
             <h1>Nossos Serviços</h1>
-            <div class="flex linha">
-                <div class="card servico" onclick="abrirModal('hospedagem')">
+            <div class="linha">
+                <div class="card servico" onclick="abrirServico('hospedagem')">
                     <img src="images/hospedagem.jpeg" alt="">
                     <h2>Hospedagem de Cavalos</h2>
                     <p>Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.</p>
                 </div>
-                <div class="card servico" onclick="abrirModal('treinamento')">
+                <div class="card servico" onclick="abrirServico('treinamento')">
                     <img src="images/treinamento.jpeg" alt="">
                     <h2>Treinamento</h2>
                     <p>Contamos com profissionais especializados que desenvolvem programas de treinamento personalizados, respeitando o ritmo e os objetivos de cada animal.</p>
                 </div>
             </div>
-            <div class="flex linha">
-                <div class="card servico" onclick="abrirModal('veterinaria')">
+            <div class="linha">
+                <div class="card servico" onclick="abrirServico('veterinaria')">
                     <img src="images/veteriaria.jpeg" alt="">
                     <h2>Assistência Veterinária</h2>
                     <p>Nossa equipe oferece acompanhamento veterinário preventivo e atendimento de emergência, priorizando a saúde e a qualidade de vida dos cavalos.</p>
                 </div>
-                <div class="card servico" onclick="abrirModal('banho')">
+                <div class="card servico" onclick="abrirServico('banho')">
                     <img src="images/banho.jpeg" alt="">
                     <h2>Manejo e Cuidados</h2>
                     <p>Realizamos alimentação balanceada, higiene, ferrageamento e monitoramento diário para manter os animais sempre saudáveis e bem cuidados.</p>
@@ -99,7 +102,7 @@
 
         <div id="modal">
             <div id="janela">
-                <button onclick="fecharModal()" id="close">X</button>
+                <button onclick="fecharServico()" id="close">X</button>
                 <img id="imagemmodal">
                 <h2 id="titulomodal"></h2>
                 <p id="textomodal"></p>
@@ -107,7 +110,7 @@
         </div>
         <div id="feedbacks">
             <h1>Histórias de transformação</h1>
-            <div class="flex feedback-box">
+            <div class="linha feedback-box">
                 <div>
                     <img src="images/estrelas.webp" alt="">
                     <p>“Faço aulas há 1 ano e mudei completamente minha equitação, já fiz meus primeiros saltos com qualidade e sem pular etapas. Hospedei minha égua lá e ela é muito bem tratada. O Haras Paraíso é minha segunda casa.”</p>
@@ -140,7 +143,7 @@
             <!--- Contato --->
             <div id="contato">
                 <p>Contato:</p>
-                <div class="flex">
+                <div id="contato-box" class="flex">
                     <div class="flex">
                         <img src="images/telefone.jpeg" class="ico" alt="">
                         <p>(73) 91234567890</p>
