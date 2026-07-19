@@ -316,7 +316,7 @@ a:hover {
     margin: 0 10vw;
 }
 #titlegallery {
-    margin: 5vw 0vw 5vw 10vw;
+    margin: 2.5vw 0vw 2.5vw 10vw;
 }
 /* tirar margem do texto */
 #galeria p {
@@ -442,6 +442,9 @@ a:hover {
 
 
 
+    #titlegallery {
+        margin: 5vw 0vw 5vw 10vw;
+    }
     .vacalo img {
         width: 80vw;
     }
