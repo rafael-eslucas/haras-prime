@@ -28,8 +28,8 @@ body {
 }
 
 * {
-    font-size: 14px;
     font-family: Arimo;
+    line-height: 1.5;
 }
 
 /* Texto e links */
@@ -39,16 +39,19 @@ h1, h2 {
 }
 
 h1 {
+    font-size: 26px;
+    margin: 2vw 0;
+}
+h2 {
     font-size: 20px;
 }
-
+h3 {
+    font-size: 18px;
+}
 p {
-    line-height: 1.5;
+    font-size: 16px;
 }
 
-h2 {
-    font-size: 14px;
-}
 
 a {
     margin-right: 2vw;
@@ -78,7 +81,7 @@ a:hover {
     margin-bottom: 2.5vw;
 }
 .card h1 {
-    margin: 2.5vw 0vw;
+    margin: 0;
 }
 .card h1,
 .card h2,
@@ -87,7 +90,7 @@ a:hover {
 }
 .card p {
     margin: 0 2.5vw;
-    padding-bottom: 1vw;
+    padding: 0.5vw 0 1vw;
 }
 .card img {
     width: 35vw;
@@ -106,8 +109,7 @@ a:hover {
 #navegacao {
     margin: 0px;
     padding: 0px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding: 1vw 10vw;
     justify-content: space-between;
     border-bottom-style: solid;
     border-width: 1px;
@@ -131,30 +133,49 @@ a:hover {
 
 /*--- Hero ---*/
 
-#hero {
+#hero-box {
     justify-content: space-between;
     background-color: #EDEDED;
     border-radius: 0.5vw;
 }
 /* A partezinha bonitinha entre o texto e a imagem e o background */
-#hero div {
+#hero-box div {
     padding: 1vw 1.5vw;
 }
 /* Tamanho da imagem */
-#hero img {
+#hero-box img {
     width: 27vw;
     border-radius: 0.5vw;
 }
+#hero-box h1 {
+    margin: 0.5vw 0;
+}
 /* Background do hero */
-#herobackground {
-    padding: 2vw;
-    padding-left: 20vw;
-    padding-right: 20vw;
+#hero {
+    padding: 10vw 20vw;
     margin: 0px;
     background-image: url(images/herobackground.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#filosofia {
+    background-color: #401713;
+    padding: 10vw 10vw;
+}
+#filosofia h1, 
+#filosofia h2, 
+#filosofia h3,
+#filosofia p {
+    color: #EDEDED;
+}
+#filosofia-box {
+    margin: 3vw 0 0;
+    justify-content: space-between;
+}
+#filosofia-box div {
+    width: 15vw;
 }
 
 
@@ -172,11 +193,52 @@ a:hover {
     opacity: 0.75;
 }
 
+#feedbacks {
+    padding: 5vw 10vw;
+    background-color: #E6E5E4;
+}
+.feedback-box {
+    gap: 10vw;
+}
+.feedback-box div {
+    padding: 1vw 1vw;
+    width: 20vw;
+    background-color: #EDEDED;
+    border-style: solid;
+    border-radius: 0.5vw;
+    border-width: 1px;
+    border-color: #DFDCDC;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+}
+.feedback-box img {
+    width: 5vw;
+}
+
+#visita {
+    margin: 5vw 20vw;
+    padding: 5vw 0;
+    background-color: #DFDCDC;
+    border-radius: 2vw;
+    text-align: center;
+
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#visita h1 {
+    margin: 0;
+}
+#visita a {
+    background-color: #401713;
+    color: #EDEDED;
+    display: inline-block;
+    padding: .5vw 1vw;
+    border-radius: 1vw;
+    margin-top: 1vw;
+}
 
 /* ----- Contato ----- */
 /* divzão */
 #contato {
-    margin: 10px 0px 0px 0px;
+    margin: 0px;
     padding: 10px 10vw;
     background-color: #401713;
 }
@@ -187,7 +249,7 @@ a:hover {
     margin-right: 10px;
 }
 /* Tirar a margem dos que não são "Contato:" */
-#contato div p {
+#contato p {
     margin-top: 0px;
 }
 /* ícones de instagram, telefone, local */
@@ -198,9 +260,10 @@ a:hover {
 /* ----- Todos os direitos reservados -----*/
 
 #direitos {
+    font-size: 14px;
     text-align: center;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
 }
 
 
@@ -243,8 +306,7 @@ a:hover {
 #galeria {
     justify-content: center;
     padding: 0px;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin: 0 10vw;
 }
 #titlegallery {
     margin: 2.5vw 10vw 3vw;
@@ -263,6 +325,7 @@ a:hover {
 #unicornio {
     flex-direction: column;
     width: 60vw;
+    margin: 0vw 10vw 10vw;
 }
 /* deixar a imagem do unicornio grandoona */
 #unicornio img {
@@ -275,20 +338,27 @@ a:hover {
 /* E se a tela for pequena? */
 
 @media (max-width: 1100px) {
-    #hero {
+    #hero-box {
         flex-direction: column;
+        padding: 2vw;
     }
-    #hero img {
-        width: 57vw;
+    #hero-box img {
+        width: 73vw;
     }
-    #hero div {
-        padding: 3 4.5vw;
+    #hero {
+        padding: 2vw 10vw;
+    }
+    #carrossel, #carrossel img {
+        width: 80vw;
     }
     .linha {
         flex-direction: column;
     }
     .card,
     .card img {
+        width: 80vw;
+    }
+    .vacalo {
         width: 80vw;
     }
     * {

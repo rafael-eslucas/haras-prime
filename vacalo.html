@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/icon.jpg">
+    <link rel="icon" href="images/icon.png">
     <title>Nossos Cavalos - Haras Prime</title>
 </head>
 <body>
-    <div class="flex" id="navegacao">
-        <div>
-            <img id="logo" src="images/logo.jpeg" alt="">
-        </div>
-        <div class="flex" id="links">
-            <a href="index.html#top">Início</a>
-            <a href="index.html#servicos">Nossos Serviços</a>
-            <a href="#top">Galeria</a>
-            <a href="index.html#contato">Contato</a>
-        </div>
-    </div>
+    <header id="top">
+        <!--- Navegação --->
+        <nav class="flex" id="navegacao">
+            <div>
+                <a href="index.html"><img id="logo" src="images/logo.jpeg" alt=""></a>
+            </div>
+            <div class="flex" id="links">
+                <a href="index.html">Início</a>
+                <a href="index.html#servicos">Nossos Serviços</a>
+                <a href="vacalo.html">Galeria</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
 
     <div>
         <h1 id="titlegallery">Nossos cavalos</h1>
-        <div id="galeria">
+        <div id="galeria" class="column">
             <div class="linha">
-                <div class="card">
+                <div class="card vacalo">
                     <img src="images/cavalo1.webp" alt="">
                     <p>Princesa</p>
                 </div>
@@ -61,27 +64,32 @@
         </div>
     </div>
 
-    <!-- Finzinho la -->
-    <div id="contato">
-        <p>Contato:</p>
-        <div class="flex">
-            <div class="flex">
-                <img src="images/telefone.jpeg" class="ico" alt="">
-                <p>(73) 91234567890</p>
-            </div>
-            <div class="flex">
-                <img src="images/instagram.jpeg" class="ico" alt="">
-                <p>@harasprime</p>
-            </div>
-            <div class="flex">
-                <img src="images/localizacao.jpeg" class="ico" alt="">
-                <p>Estrada das Palmeiras, 1234 Zona rural, ILH/BA</p>
-            </div> 
-        </div>
-    </div>
 
-    <div>
-        <h3 id="direitos">&copy; 2026 Haras Prime - Todos os direitos reservados</h3>
-    </div>
+    <footer>
+        <!--- Contato --->
+        <div id="contato">
+            <p>Contato:</p>
+            <div class="flex">
+                <div class="flex">
+                    <img src="images/telefone.jpeg" class="ico" alt="">
+                    <p>(73) 91234567890</p>
+                </div>
+                <a href="https://www.instagram.com/haras_prime_?utm_source=qr&igsh=NnFuOHBhNTJhNTBn"><div class="flex">
+                    <img src="images/instagram.jpeg" class="ico" alt="">
+                    <p>@harasprime</p>
+                </div></a>
+                <div class="flex">
+                    <img src="images/localizacao.jpeg" class="ico" alt="">
+                    <p>Estrada das Palmeiras, 1234 Zona rural, ILH/BA</p>
+                </div> 
+            </div>
+        </div>
+
+        <!--- Todos os direitos reservados --->
+        <div>
+            <h3 id="direitos">&copy; 2026 Haras Prime - Todos os direitos reservados</h3>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/icon.jpg">
+    <link rel="icon" href="images/icon.png">
+
     <title>Haras Prime</title>
 </head>
     <body>
@@ -25,8 +26,8 @@
 
 
         <!--- Hero --->
-        <div id="herobackground">
-            <div class="flex" id="hero">
+        <div id="hero">
+            <div class="flex" id="hero-box">
                 <div>
                     <img src="images/hero.jpeg" alt="">
                 </div>
@@ -39,9 +40,32 @@
             </div>
         </div>
 
-        <!--- Carrossel --->
-        <div>
-            <!--carrossel deve nascer ainda-->
+        <!--- Filosofia? --->
+        <div id="filosofia">
+            <h1>Manejo em liberdade,<br>e responsabilidade pela vida. </h1>
+            <div class="flex" id="filosofia-box">
+                <div>
+                    <h2>1</h2>
+                    <h3>Simplicidade & descontração</h3>
+                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                </div>
+                <div>
+                    <h2>2</h2>
+                    <h3>Simplicidade & descontração</h3>
+                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                </div>
+                <div>
+                    <h2>3</h2>
+                    <h3>Simplicidade & descontração</h3>
+                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                </div>
+                <div>
+                    <h2>4</h2>
+                    <h3>Simplicidade & descontração</h3>
+                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                </div>
+            </div>
+
         </div>
 
         <!--- Serviços --->
@@ -77,9 +101,39 @@
             <div id="janela">
                 <button onclick="fecharModal()" id="close">X</button>
                 <img id="imagemmodal">
-                <h2 id="titulomodal">Hospedagem de Cavalos</h2>
-                <p id="textomodal">Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.</p>
+                <h2 id="titulomodal"></h2>
+                <p id="textomodal"></p>
             </div>
+        </div>
+        <div id="feedbacks">
+            <h1>Histórias de transformação</h1>
+            <div class="flex feedback-box">
+                <div>
+                    <img src="images/estrelas.webp" alt="">
+                    <p>“Faço aulas há 1 ano e mudei completamente minha equitação, já fiz meus primeiros saltos com qualidade e sem pular etapas. Hospedei minha égua lá e ela é muito bem tratada. O Haras Paraíso é minha segunda casa.”</p>
+                    <p>Juliana Santos</p>
+                </div>
+                <div>
+                    <img src="images/estrelas.webp" alt="">
+                    <p>“Faço aulas há 1 ano e mudei completamente minha equitação, já fiz meus primeiros saltos com qualidade e sem pular etapas. Hospedei minha égua lá e ela é muito bem tratada. O Haras Paraíso é minha segunda casa.”</p>
+                    <p>Juliana Santos</p>
+                </div>
+                <div>
+                    <img src="images/estrelas.webp" alt="">
+                    <p>“Faço aulas há 1 ano e mudei completamente minha equitação, já fiz meus primeiros saltos com qualidade e sem pular etapas. Hospedei minha égua lá e ela é muito bem tratada. O Haras Paraíso é minha segunda casa.”</p>
+                    <p>Juliana Santos</p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div id="galeria-amostra">
+            <img src="images/cavalo1.webp" alt="">
+        </div>-->
+
+        <div id="visita">
+            <h1>Agende uma visita ao Haras Prime</h1>
+            <p>Conheça, sinta o ambiente e descubra a vivência equestre certa para você ou sua família.</p>
+            <a href="https://www.instagram.com/haras_prime_?utm_source=qr&igsh=NnFuOHBhNTJhNTBn">Falar no instagram</a>
         </div>
 
         <footer>
@@ -107,9 +161,6 @@
                 <h3 id="direitos">&copy; 2026 Haras Prime - Todos os direitos reservados</h3>
             </div>
         </footer>
-
-
-
 
 
         <script src="script.js"></script>
