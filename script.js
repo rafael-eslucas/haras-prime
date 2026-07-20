@@ -47,6 +47,7 @@ function abrirMenu() {
 const imagens = document.querySelectorAll("#galeria-amostra img");
 
 imagens.forEach((imagem) => 
-    addEventListener('click', () =>
-        window.location.href = "vacalo.html")
+    imagem.addEventListener('click', () =>
+        window.location.href = "vacalo.html"
+    )
 );
