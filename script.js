@@ -40,3 +40,13 @@ function fecharServico() {
 function abrirMenu() {
     links.classList.toggle("aberto")
 }
+
+
+
+
+const imagens = document.querySelectorAll("#galeria-amostra img");
+
+imagens.forEach((imagem) => 
+    addEventListener('click', () =>
+        window.location.href = "vacalo.html")
+);

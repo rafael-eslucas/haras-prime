@@ -228,6 +228,15 @@ a:hover {
 #galeria-amostra div {
     justify-content: space-between;
     margin-bottom: 0.1vw;
+    overflow: hidden;
+}
+#galeria-amostra img {
+    border-radius: 0.5vw;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+#galeria-amostra img:hover {
+    opacity: 0.6;                   /* Perde a transparência (fica 100% visível) */
+    transform: scale(1.05);       /* Dá o "zoomzinho" (aumenta 5% do tamanho) */
 }
 .galeria-amostra-img1 {
     width: 39.9vw;
