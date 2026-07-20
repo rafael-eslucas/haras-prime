@@ -221,6 +221,24 @@ a:hover {
     width: 5vw;
 }
 
+#galeria-amostra {
+    width: 80vw;
+    margin: 5vw 10vw;
+}
+#galeria-amostra div {
+    justify-content: space-between;
+    margin-bottom: 0.1vw;
+}
+.galeria-amostra-img1 {
+    width: 39.9vw;
+}
+.galeria-amostra-img2 {
+    width: 26.5vw;
+}
+.galeria-amostra-img3 {
+    width: 19.8sudo vw;
+}
+
 #visita {
     margin: 5vw 20vw;
     padding: 5vw 0;
@@ -344,7 +362,7 @@ a:hover {
 
 /* ---------- E se a tela for pequena? ---------- */
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     /* Básicos */
     * {
         font-size: 12px;
