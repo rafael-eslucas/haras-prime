@@ -185,6 +185,37 @@ a:hover {
     width: 15vw;
 }
 
+/* ----- Carrossel ----- */
+.carrossel {
+    display: flex;
+    width: 80vw;
+    margin-top: 5vw;
+    padding: 10vw;
+    overflow-x: auto;
+    gap: 1vw;
+    background-color: #E6E5E4;
+}
+
+.carrossel-grupo {
+    display: flex;
+    flex: 0 0 80vw;
+    justify-content: center;
+    gap: 1.5vw;
+    animation: spin 10s infinite linear;
+}
+
+.carrossel img {
+    width: 20vw;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
 
 /* --- Nossos Serviços --- */
 /* div principal */
@@ -229,6 +260,7 @@ a:hover {
     justify-content: space-between;
     margin-bottom: 0.1vw;
     overflow: hidden;
+    border-radius: 0.5vw;
 }
 #galeria-amostra img {
     border-radius: 0.5vw;
@@ -239,13 +271,13 @@ a:hover {
     transform: scale(1.05);       /* Dá o "zoomzinho" (aumenta 5% do tamanho) */
 }
 .galeria-amostra-img1 {
-    width: 39.9vw;
+    width: 39.8vw;
 }
 .galeria-amostra-img2 {
-    width: 26.5vw;
+    width: 26.4vw;
 }
 .galeria-amostra-img3 {
-    width: 19.9vw;
+    width: 19.8vw;
 }
 
 #visita {
@@ -427,6 +459,14 @@ a:hover {
     }
     #hero {
         padding: 10vw;
+    }
+
+    .carrossel img{
+        width: 80vw;
+    }
+
+    #galeria-amostra img {
+        width: 80vw;
     }
 
     /* ---------- Filosofia ---------- */

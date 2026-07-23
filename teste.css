@@ -1,0 +1,28 @@
+.carrossel {
+    display: flex;
+    width: 80vw;
+    margin: 10vw;
+    overflow-x: auto;
+    gap: 1vw;
+}
+
+.carrossel-grupo {
+    display: flex;
+    flex: 0 0 80vw;
+    justify-content: center;
+    gap: 1.5vw;
+    animation: spin 10s infinite linear;
+}
+
+.carrossel img {
+    width: 20vw;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
