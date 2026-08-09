@@ -201,7 +201,7 @@ a:hover {
     flex: 0 0 80vw;
     justify-content: center;
     gap: 1.5vw;
-    animation: spin 10s infinite linear;
+    animation: spin 20s infinite linear;
 }
 
 .carrossel img {
