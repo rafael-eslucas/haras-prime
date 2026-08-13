@@ -451,6 +451,7 @@ a:hover {
     .card,
     .card img {
         width: 80vw;
+        height: 53.3vw;
     }
 
     /* ---------- Menu ---------- */
