@@ -451,6 +451,8 @@ a:hover {
     .card,
     .card img {
         width: 80vw;
+    }
+    .card img {
         height: 53.3vw;
     }
 
@@ -514,6 +516,10 @@ a:hover {
     }
     .servico {
         margin-bottom: 5vw;
+    }
+    .card .servico_ico {
+        height: 6vw;
+        margin-bottom: 4vw;
     }
 
     /* ---------- Feedback ---------- */
