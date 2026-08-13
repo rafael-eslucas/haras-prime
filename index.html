@@ -43,35 +43,34 @@
             </div>
         </div>
 
-        <!--- Filosofia? --->
+        <!--- Filosofia --->
         <div id="filosofia">
-            <h1>Manejo em liberdade,<br>e responsabilidade pela vida. </h1>
+            <h1>Manejo em liberdade, com base no<br>respeito e na responsabilidade pela vida. </h1>
             <div class="linha" id="filosofia-box">
                 <div>
                     <h2>1</h2>
-                    <h3>Simplicidade & descontração</h3>
-                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                    <h3>Simplicidade & Descontração</h3>
+                    <p>Criamos um ambiente acolhedor e leve, onde aprender e conviver com os cavalos é uma experiência de puro prazer, livre de pressões ou cobranças. Acreditamos que a verdadeira conexão acontece de forma natural, respeitando o ritmo de cada pessoa e de cada animal.</p>
                 </div>
                 <div>
                     <h2>2</h2>
-                    <h3>Simplicidade & descontração</h3>
-                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                    <h3>Saúde & Bem-Estar Integral</h3>
+                    <p>Olhamos para a saúde de forma sistêmica e integrada: a qualidade do ambiente, o manejo natural dos animais e o bem-estar das pessoas estão profundamente conectados. Cada detalhe da rotina importa para garantir o equilíbrio físico, emocional e social da nossa comunidade.</p>
                 </div>
                 <div>
                     <h2>3</h2>
-                    <h3>Simplicidade & descontração</h3>
-                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                    <h3>Ação e Conhecimento Técnico</h3>
+                    <p>Nossa cultura equestre é fundamentada na busca constante por conhecimento atualizado e evidências científicas. Unimos a sensibilidade do manejo tradicional a práticas modernas, garantindo decisões conscientes, seguras e verdadeiramente eficientes para o desenvolvimento equino.</p>
                 </div>
                 <div>
                     <h2>4</h2>
-                    <h3>Simplicidade & descontração</h3>
-                    <p>Um ambiente leve, onde aprender e conviver com cavalos é prazer, não pressão.</p>
+                    <h3>Respeito ao Cavalo Senciente</h3>
+                    <p>Reconhecemos o cavalo como um indivíduo senciente, capaz de sentir, aprender e se expressar. Esse profundo respeito pela sua natureza e sensibilidade guia cada uma de nossas escolhas cotidianas, priorizando sempre a sua dignidade, liberdade e qualidade de vida.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Carrossel uhuul -->
-
+        <!-- Carrossel (feito com css) -->
         <div class="carrossel">
             <div class="carrossel-grupo">
                 <img src="images/cavalo1.webp" alt="">
@@ -113,28 +112,29 @@
                 <div class="card servico" onclick="abrirServico('hospedagem')">
                     <img src="images/hospedagem.jpeg" alt="">
                     <h2>Hospedagem de Cavalos</h2>
-                    <p>Oferecemos cocheiras amplas, confortáveis e monitoradas diariamente, garantindo segurança, bem-estar e todo o cuidado que seu cavalo merece.</p>
+                    <img src="images/hospedagem_icon.jpg" class="servico_ico" alt="">
                 </div>
                 <div class="card servico" onclick="abrirServico('treinamento')">
                     <img src="images/treinamento.jpeg" alt="">
                     <h2>Treinamento</h2>
-                    <p>Contamos com profissionais especializados que desenvolvem programas de treinamento personalizados, respeitando o ritmo e os objetivos de cada animal.</p>
+                    <img src="images/treinamento_icon.jpg" class="servico_ico" alt="">
                 </div>
             </div>
             <div class="linha">
                 <div class="card servico" onclick="abrirServico('veterinaria')">
                     <img src="images/veteriaria.jpeg" alt="">
                     <h2>Assistência Veterinária</h2>
-                    <p>Nossa equipe oferece acompanhamento veterinário preventivo e atendimento de emergência, priorizando a saúde e a qualidade de vida dos cavalos.</p>
+                    <img src="images/veterinaria_icon.jpg" class="servico_ico" alt="">
                 </div>
                 <div class="card servico" onclick="abrirServico('banho')">
                     <img src="images/banho.jpeg" alt="">
                     <h2>Manejo e Cuidados</h2>
-                    <p>Realizamos alimentação balanceada, higiene, ferrageamento e monitoramento diário para manter os animais sempre saudáveis e bem cuidados.</p>
+                    <img src="images/banho_icon.jpg" class="servico_ico" alt="">
                 </div>
             </div>
         </div>
-
+        
+        <!-- Modal para quando clicar aparecer uma janelinha com mais informações sobre os serviços --->
         <div id="modal">
             <div id="janela">
                 <button onclick="fecharServico()" id="close">X</button>
@@ -143,27 +143,30 @@
                 <p id="textomodal"></p>
             </div>
         </div>
+
+        <!-- Feedbacks --->
         <div id="feedbacks">
             <h1>Histórias de transformação</h1>
             <div class="linha feedback-box">
                 <div>
                     <img src="images/estrelas.webp" alt="">
                     <p>"Tive uma excelente experiência no Haras Prime. Os cavalos são muito bem cuidados, o ambiente é limpo e organizado, e a equipe foi extremamente atenciosa. Com certeza voltarei e recomendo a visita."</p>
-                    <p>Juliana Santos</p>
+                    <p>Karina</p>
                 </div>
                 <div>
                     <img src="images/estrelas.webp" alt="">
                     <p>“O Haras Prime superou minhas expectativas. As instalações são bonitas, os animais aparentam estar saudáveis e bem tratados, e o atendimento foi cordial do início ao fim. Foi um passeio muito agradável.”</p>
-                    <p>Juliana Santos</p>
+                    <p>Amanda</p>
                 </div>
                 <div>
                     <img src="images/estrelas.webp" alt="">
                     <p>“Gostei muito da visita ao Haras Prime. O local transmite tranquilidade e profissionalismo, e a equipe demonstrou grande conhecimento e carinho pelos cavalos. Uma experiência excelente para toda a família.”</p>
-                    <p>Juliana Santos</p>
+                    <p>Aline</p>
                 </div>
             </div>
         </div>
 
+        <!-- Amostra clicável da galeria, com imagens divididas irregularmente de forma interessante. --->
         <div id="galeria-amostra">
             <h1>Galeria</h1>
             <div class="linha">
@@ -187,7 +190,7 @@
             </div>
             <div class="linha">
                 <div>
-                    <img src="images/cavalo6.jpeg" class="galeria-amostra-img3">
+                    <img src="images/cavalo10.jpeg" class="galeria-amostra-img3">
                 </div>
                 <div>
                     <img src="images/cavalo7.jpeg" class="galeria-amostra-img3">

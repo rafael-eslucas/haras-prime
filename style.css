@@ -32,7 +32,7 @@ body {
     line-height: 1.5;
 }
 
-/* Texto e links */
+/* Textos e links */
 
 h1, h2 {
     font-family: Baskerville;
@@ -52,13 +52,11 @@ p {
     font-size: 16px;
 }
 
-
 a {
     margin-right: 2vw;
     text-decoration: none;
     color: #000000;
 }
-
 a:hover {
     color: #555555;
 }
@@ -70,8 +68,15 @@ a:hover {
 .column {
     display: flex;
     flex-direction: column;
+}.linha {
+    display: flex;
+    justify-content: space-between;
 }
+/* Configuração geral do card, que também é um div flex, mas mais específico, que foi muito usado então reuni em uma classe só */
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 35vw;
     padding: 0px;
     border-style: solid;
@@ -79,6 +84,7 @@ a:hover {
     border-width: 1px;
     border-color: #A69897;
     margin-bottom: 2.5vw;
+    overflow: auto;
 }
 .card h1 {
     margin: 0;
@@ -94,17 +100,16 @@ a:hover {
 }
 .card img {
     width: 35vw;
+    height: 23.3vw;      /* 35x2/3, porque a maioria das imagens têm proporção 3:2 mas algumas não encaixam, então padroniza. 
+                            Algumas imagens estavam com proporções contrastantes e não ficavam boas na galeria nem na galeria-amostra */
     border-radius: 15px;
     border-bottom: 1px;
     border-color: #A69897;
-}
-.linha {
-    display: flex;
-    justify-content: space-between;
+    overflow: auto;
 }
 
 
-/* Navegação */
+/* ---------- Aba de navegação na parte superior do site ---------- */
 
 #navegacao {
     margin: 0px;
@@ -118,11 +123,12 @@ a:hover {
     top: 0;
     z-index: 1000;
 }
-
+/* Links presentes na navegação */
 #links {
     justify-content: flex-end;
     align-items: center;
 }
+/* Menu pra clicar quando for tela pequena, porque assim não fica os links muito apertados */
 #menu {
     display: none;    
 }
@@ -131,6 +137,7 @@ a:hover {
     border: none;
 }
 
+/* Logo da navegação */
 #logo {
     width: 5vw;
     min-width: 50px;
@@ -138,7 +145,7 @@ a:hover {
 }
 
 
-/*--- Hero ---*/
+/* ---------- Hero ---------- */
 
 #hero-box {
     justify-content: space-between;
@@ -167,6 +174,8 @@ a:hover {
     background-position: center;
 }
 
+
+/* ---------- Filosofia ---------- */
 #filosofia {
     background-color: #401713;
     padding: 10vw 10vw;
@@ -185,7 +194,7 @@ a:hover {
     width: 15vw;
 }
 
-/* ----- Carrossel ----- */
+/* ---------- Carrossel ---------- */
 .carrossel {
     display: flex;
     width: 80vw;
@@ -195,7 +204,6 @@ a:hover {
     gap: 1vw;
     background-color: #E6E5E4;
 }
-
 .carrossel-grupo {
     display: flex;
     flex: 0 0 80vw;
@@ -203,34 +211,41 @@ a:hover {
     gap: 1.5vw;
     animation: spin 20s infinite linear;
 }
-
 .carrossel img {
     width: 20vw;
 }
-
-.carrossel::-webkit-scrollbar {
+.carrossel::-webkit-scrollbar {   /* Tirar a barrinha de scroll */
     display: none;
 }
-
-@keyframes spin {
+@keyframes spin {    /* Animação */
     from {translate: 0;}
     to {translate: -100%;}
 }
 
-/* --- Nossos Serviços --- */
+/* ---------- Nossos Serviços ---------- */
 /* div principal */
 #servicos {
     margin-top: 2.5vw;
     margin-left: 10vw;
     margin-right: 10vw;
 }
+/* Cada serviço, que é um card*/
 .servico {
     transition: opacity 0.3s ease-in-out;
 }
+/* Ícones dos serviços */
+.card .servico_ico {
+    height: 2vw;
+    width: auto;
+    margin-bottom: 1vw;
+}
+/* Transiçãozinha */
 .servico:hover {
     opacity: 0.75;
 }
 
+
+/* ---------- Feedbacks ---------- */
 #feedbacks {
     padding: 5vw 10vw;
     background-color: #E6E5E4;
@@ -252,6 +267,7 @@ a:hover {
     width: 5vw;
 }
 
+/* ---------- Amostra da galeria, com distribuição irregular e interessante ---------- */
 #galeria-amostra {
     width: 80vw;
     margin: 5vw 10vw;
@@ -262,24 +278,31 @@ a:hover {
     overflow: hidden;
     border-radius: 0.5vw;
 }
+
 #galeria-amostra img {
     border-radius: 0.5vw;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 #galeria-amostra img:hover {
-    opacity: 0.6;                   /* Perde a transparência (fica 100% visível) */
+    opacity: 0.6;                   /* Fica transparente (fica 60% visível) */
     transform: scale(1.05);       /* Dá o "zoomzinho" (aumenta 5% do tamanho) */
 }
+/* Cada tipo, 1, 2 e 3, tem um tamanho diferente pra encaixar nas linhas certas. 
+   Como uma linha tem 4 imagens, outra tem 2 imagens, e outra tem 3, em cada linha as imagens precisam ter tamanhos diferentes*/
 .galeria-amostra-img1 {
     width: 39.8vw;
+    height: 26.5vw;
 }
 .galeria-amostra-img2 {
     width: 26.4vw;
+    height: 17.6vw;
 }
 .galeria-amostra-img3 {
     width: 19.8vw;
+    height: 13.2vw;
 }
 
+/* ---------- Visita ---------- */
 #visita {
     margin: 5vw 20vw;
     padding: 5vw 0;
@@ -301,7 +324,7 @@ a:hover {
     margin-top: 1vw;
 }
 
-/* ----- Contato ----- */
+/* ---------- Contato ---------- */
 /* divzão */
 #contato {
     margin: 0px;
@@ -323,7 +346,7 @@ a:hover {
     height: 16px;
 }
 
-/* ----- Todos os direitos reservados -----*/
+/* ---------- Todos os direitos reservados ---------- */
 
 #direitos {
     font-size: 14px;
@@ -333,7 +356,7 @@ a:hover {
 }
 
 
-
+/* ---------- Modal que aparece quando clica nos serviços usando js que adiciona e retira classes ---------- */
 #modal {
     display: none;
     position: fixed;
@@ -367,7 +390,7 @@ a:hover {
 
 /* -------------------- VACALO.HTML -------------------- */
 
-/* ----- div da galeria ----- */
+/* ---------- div da galeria ---------- */
 /* "Nossos cavalos" */
 #galeria {
     justify-content: center;
@@ -382,8 +405,10 @@ a:hover {
     margin: 0px;
 }
 /* Tamanho e margem das imagens que não são unicornios */
-.vacalo img {
+.cavalo img {
     width: 35vw;
+    height: 23.3vw;
+    overflow: auto;;
     margin-right: 0px;
 }
 /* deixar div do unicornio 
@@ -396,8 +421,11 @@ a:hover {
 /* deixar a imagem do unicornio grandoona */
 #unicornio img {
     width: 60vw;
+    height: auto;
     border-radius: 0.5vw;
 }
+
+
 
 
 
@@ -424,7 +452,8 @@ a:hover {
     .card img {
         width: 80vw;
     }
-    /* Menu */
+
+    /* ---------- Menu ---------- */
     #menu {
         display: flex;
     }
